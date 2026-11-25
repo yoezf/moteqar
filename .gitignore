@@ -1,0 +1,12 @@
+dist/
+**/ADMIN-LOGIN.txt
+**/*.sqlite
+**/*.sqlite-journal
+admin/storage/app/*
+!admin/storage/app/.gitignore
+admin/php-ext/
+.env
+.env.*
+!.env.production.example
+node_modules/
+vendor/

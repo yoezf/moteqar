@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOTEQAR — Technology &amp; Digital Innovation</title>
+<meta name="description" content="MOTEQAR is a technology and digital innovation company building modern software, applications, and meaningful digital solutions for the future.">
+<meta property="og:title" content="MOTEQAR — Technology & Digital Innovation">
+<meta property="og:description" content="Think Beyond. Create Tomorrow.">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230B1220'/%3E%3Cpath d='M11 27V13l9 9 9-9v14' fill='none' stroke='%2338BDF8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M26 27l4 4' stroke='%232563EB' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1220;
+    --navy-2: #101a2e;
+    --navy-3: #16223a;
+    --blue: #2563EB;
+    --sky: #38BDF8;
+    --white: #F8FAFC;
+    --silver: #94A3B8;
+    --line: rgba(148, 163, 184, .14);
+    --line-strong: rgba(148, 163, 184, .28);
+    --radius: 16px;
+    --max: 1180px;
+    --head: "Space Grotesk", system-ui, sans-serif;
+    --body: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { background: var(--navy); color: var(--white); font: 16px/1.65 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--blue); padding: 8px 14px; border-radius: 8px; z-index: 100; }
+  .skip:focus { left: 8px; }
+
+  /* Type */
+  h1, h2, h3 { font-family: var(--head); letter-spacing: -.02em; line-height: 1.1; }
+  h1 { font-size: clamp(2.6rem, 6.4vw, 5rem); font-weight: 700; }
+  h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; }
+  h3 { font-size: 1.2rem; font-weight: 600; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 500 .78rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--sky); }
+  .eyebrow::before { content: ""; width: 18px; height: 1px; background: currentColor; }
+  .lead { color: var(--silver); font-size: 1.12rem; max-width: 620px; }
+  .muted { color: var(--silver); }
+  .grad { background: linear-gradient(100deg, var(--white) 20%, var(--sky) 70%, var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px; font-weight: 500; font-size: .95rem; border: 1px solid transparent; cursor: pointer; transition: transform .2s, background .2s, border-color .2s, box-shadow .2s; }
+  .btn svg { width: 18px; height: 18px; transition: transform .2s; }
+  .btn:hover svg { transform: translateX(3px); }
+  .btn-primary { background: var(--blue); box-shadow: 0 0 0 1px rgba(56,189,248,.3) inset, 0 10px 30px -10px rgba(37,99,235,.8); }
+  .btn-primary:hover { background: #3b74f0; transform: translateY(-1px); }
+  .btn-ghost { border-color: var(--line-strong); background: rgba(248,250,252,.03); }
+  .btn-ghost:hover { border-color: var(--sky); background: rgba(56,189,248,.06); }
+  .link { display: inline-flex; align-items: center; gap: 6px; color: var(--sky); font-weight: 500; font-size: .92rem; }
+  .link svg { width: 16px; height: 16px; transition: transform .2s; }
+  .link:hover svg { transform: translateX(3px); }
+
+  /* Nav */
+  .nav { position: sticky; top: 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+  .nav.scrolled { background: rgba(11,18,32,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 700 1.15rem var(--head); letter-spacing: .14em; }
+  .brand svg { width: 34px; height: 34px; }
+  .nav-links { display: flex; gap: 4px; list-style: none; }
+  .nav-links a { padding: 8px 14px; border-radius: 999px; color: var(--silver); font-size: .92rem; transition: color .2s, background .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(248,250,252,.05); }
+  .nav-cta { padding: 10px 18px; }
+  .menu-btn { display: none; background: none; border: 1px solid var(--line-strong); border-radius: 10px; width: 42px; height: 42px; align-items: center; justify-content: center; cursor: pointer; }
+  .menu-btn svg { width: 20px; height: 20px; }
+  .mobile { position: fixed; inset: 72px 0 0; background: rgba(11,18,32,.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 24px; display: flex; flex-direction: column; gap: 6px; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; z-index: 49; }
+  .mobile.open { opacity: 1; visibility: visible; transform: none; }
+  .mobile a:not(.btn) { display: flex; justify-content: space-between; align-items: center; padding: 16px 4px; border-bottom: 1px solid var(--line); font: 500 1.4rem var(--head); }
+  .mobile a:not(.btn) svg { width: 20px; height: 20px; color: var(--silver); }
+  .mobile .btn { margin-top: 20px; justify-content: center; }
+
+  /* Sections */
+  section { padding: 120px 0; position: relative; }
+  .sec-head { display: grid; gap: 16px; margin-bottom: 56px; max-width: 720px; }
+  .sec-head.center { margin-inline: auto; text-align: center; justify-items: center; }
+  .divider { border-top: 1px solid var(--line); }
+
+  /* Hero */
+  .hero { padding: 72px 0 120px; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 20%, transparent 75%); opacity: .5; pointer-events: none; }
+  .hero::after { content: ""; position: absolute; width: 620px; height: 620px; right: -120px; top: -80px; background: radial-gradient(circle, rgba(37,99,235,.28), transparent 65%); pointer-events: none; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
+  .hero h1 { margin: 22px 0 24px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .hero-meta div { display: flex; align-items: center; gap: 10px; color: var(--silver); font-size: .9rem; }
+  .hero-meta svg { width: 18px; height: 18px; color: var(--sky); }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 8px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: .82rem; color: var(--silver); background: rgba(248,250,252,.03); }
+  .badge b { background: rgba(56,189,248,.12); color: var(--sky); font-weight: 500; padding: 2px 8px; border-radius: 999px; }
+  .viz { aspect-ratio: 1; width: 100%; max-width: 500px; justify-self: center; }
+  .viz .spin { transform-origin: 250px 250px; animation: spin 60s linear infinite; }
+  .viz .spin-r { transform-origin: 250px 250px; animation: spin 90s linear infinite reverse; }
+  .viz .pulse { animation: pulse 3.2s ease-in-out infinite; }
+  .viz .dash { stroke-dasharray: 4 10; animation: dash 6s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+  @keyframes dash { to { stroke-dashoffset: -112; } }
+
+  /* Cards */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card { position: relative; background: linear-gradient(180deg, rgba(22,34,58,.7), rgba(16,26,46,.5)); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; transition: border-color .3s, transform .3s, box-shadow .3s; overflow: hidden; }
+  .card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 0%), rgba(56,189,248,.09), transparent 45%); opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .card:hover { border-color: rgba(56,189,248,.35); transform: translateY(-3px); box-shadow: 0 24px 50px -30px rgba(37,99,235,.6); }
+  .card:hover::before { opacity: 1; }
+  .icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(37,99,235,.25), rgba(56,189,248,.08)); border: 1px solid rgba(56,189,248,.25); color: var(--sky); margin-bottom: 22px; }
+  .icon svg { width: 22px; height: 22px; }
+  .card h3 { margin-bottom: 10px; }
+  .card p { color: var(--silver); font-size: .95rem; }
+  .ticks { list-style: none; margin: 18px 0 22px; display: grid; gap: 8px; }
+  .ticks li { display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; color: #cbd5e1; }
+  .ticks svg { width: 16px; height: 16px; color: var(--sky); flex: none; margin-top: 4px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .quote { font: 500 clamp(1.4rem, 2.6vw, 1.9rem)/1.35 var(--head); letter-spacing: -.01em; padding-left: 24px; border-left: 2px solid var(--blue); }
+  .origin { margin-top: 32px; display: flex; gap: 16px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(16,26,46,.6); }
+  .origin .icon { margin: 0; flex: none; }
+  .origin strong { font-family: var(--head); font-size: 1.1rem; }
+  .vm { display: grid; gap: 20px; }
+  .mission { list-style: none; counter-reset: m; display: grid; gap: 12px; margin-top: 14px; }
+  .mission li { counter-increment: m; display: flex; gap: 14px; color: #cbd5e1; font-size: .95rem; }
+  .mission li::before { content: "0" counter(m); font: 600 .8rem var(--head); color: var(--sky); padding-top: 3px; }
+  .values { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 64px; }
+  .value { text-align: center; padding: 24px 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(16,26,46,.5); transition: border-color .3s; }
+  .value:hover { border-color: rgba(56,189,248,.35); }
+  .value svg { width: 22px; height: 22px; color: var(--sky); margin: 0 auto 12px; }
+  .value span { font: 500 .95rem var(--head); }
+
+  /* Innovation / process */
+  .innovation { background: linear-gradient(180deg, transparent, rgba(37,99,235,.06), transparent); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+  .steps::before { content: ""; position: absolute; top: 24px; left: 6%; right: 6%; height: 1px; background: linear-gradient(90deg, transparent, var(--line-strong), transparent); }
+  .step { position: relative; }
+  .step .num { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); border: 1px solid rgba(56,189,248,.4); color: var(--sky); margin-bottom: 22px; box-shadow: 0 0 24px -6px rgba(56,189,248,.5); }
+  .step .num svg { width: 20px; height: 20px; }
+  .step small { font: 600 .75rem var(--head); letter-spacing: .12em; color: var(--silver); }
+  .step h3 { margin: 6px 0 8px; }
+  .step p { color: var(--silver); font-size: .93rem; }
+
+  /* Products */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .filter { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line-strong); background: transparent; color: var(--silver); font-size: .88rem; cursor: pointer; transition: all .2s; }
+  .filter:hover { color: var(--white); }
+  .filter[aria-pressed="true"] { background: var(--white); color: var(--navy); border-color: var(--white); }
+  .product { display: flex; flex-direction: column; }
+  .product-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 22px; }
+  .plogo { width: 52px; height: 52px; border-radius: 14px; border: 1px dashed var(--line-strong); display: grid; place-items: center; color: var(--silver); }
+  .plogo svg { width: 22px; height: 22px; }
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--silver); }
+  .status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .status.dev { color: var(--sky); border-color: rgba(56,189,248,.35); }
+  .tag { font-size: .78rem; color: var(--silver); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+  .product .link { margin-top: auto; padding-top: 22px; }
+  .product .link[aria-disabled="true"] { color: var(--silver); cursor: not-allowed; }
+  .placeholder-note { display: flex; gap: 10px; align-items: center; font-size: .85rem; color: var(--silver); margin-top: 24px; }
+  .placeholder-note svg { width: 16px; height: 16px; color: var(--sky); flex: none; }
+  .empty { grid-column: 1 / -1; text-align: center; padding: 56px 24px; border: 1px dashed var(--line-strong); border-radius: var(--radius); color: var(--silver); }
+  .empty svg { width: 28px; height: 28px; margin: 0 auto 12px; color: var(--sky); }
+
+  /* Projects */
+  .project { padding: 0; display: grid; grid-template-columns: 1fr 1.15fr; }
+  .project + .project { margin-top: 20px; }
+  .p-visual { min-height: 320px; position: relative; border-right: 1px solid var(--line); background: radial-gradient(circle at 30% 30%, rgba(37,99,235,.35), transparent 55%), radial-gradient(circle at 80% 80%, rgba(56,189,248,.2), transparent 50%), var(--navy-2); display: grid; place-items: center; overflow: hidden; }
+  .p-visual svg.art { width: 70%; max-width: 280px; opacity: .9; }
+  .p-visual .ph { position: absolute; left: 16px; bottom: 16px; font-size: .75rem; color: var(--silver); display: flex; gap: 6px; align-items: center; }
+  .p-visual .ph svg { width: 14px; height: 14px; }
+  .p-body { padding: 36px; }
+  .p-body h3 { font-size: 1.5rem; margin: 6px 0 20px; }
+  .p-rows { display: grid; gap: 16px; }
+  .p-rows dt { font: 600 .75rem var(--head); letter-spacing: .12em; text-transform: uppercase; color: var(--sky); margin-bottom: 4px; }
+  .p-rows dd { color: #cbd5e1; font-size: .94rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: .78rem; padding: 4px 10px; border-radius: 6px; background: rgba(148,163,184,.1); color: #cbd5e1; }
+
+  /* CTA */
+  .cta-box { position: relative; text-align: center; padding: 88px 32px; border-radius: 24px; border: 1px solid rgba(56,189,248,.25); background: radial-gradient(ellipse at top, rgba(37,99,235,.35), transparent 65%), var(--navy-2); overflow: hidden; }
+  .cta-box::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(148,163,184,.18) 1px, transparent 1px); background-size: 22px 22px; mask-image: radial-gradient(ellipse at center, #000, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at center, #000, transparent 70%); pointer-events: none; }
+  .cta-box > * { position: relative; }
+  .cta-box h2 { max-width: 760px; margin: 0 auto 18px; }
+  .cta-box .lead { margin: 0 auto 36px; }
+  .cta-box .hero-ctas { justify-content: center; margin: 0; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; }
+  .info { display: grid; gap: 14px; align-content: start; }
+  .info-item { display: flex; gap: 14px; align-items: center; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(16,26,46,.5); }
+  .info-item .icon { margin: 0; width: 42px; height: 42px; }
+  .info-item small { display: block; color: var(--silver); font-size: .8rem; }
+  .socials { display: flex; gap: 10px; margin-top: 10px; }
+  .socials a { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; border: 1px solid var(--line-strong); color: var(--silver); transition: all .2s; }
+  .socials a:hover { color: var(--white); border-color: var(--sky); }
+  .socials svg { width: 18px; height: 18px; }
+  form.card { padding: 36px; }
+  form.card:hover { transform: none; }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .field { display: grid; gap: 8px; }
+  .field.full { grid-column: 1 / -1; }
+  label { font-size: .85rem; font-weight: 500; color: #cbd5e1; }
+  label .req { color: var(--sky); }
+  input, select, textarea { width: 100%; padding: 13px 14px; border-radius: 10px; background: rgba(11,18,32,.7); border: 1px solid var(--line-strong); transition: border-color .2s, box-shadow .2s; }
+  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2394A3B8' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+  select option { background: var(--navy); }
+  textarea { min-height: 140px; resize: vertical; }
+  input::placeholder, textarea::placeholder { color: #64748b; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sky); box-shadow: 0 0 0 3px rgba(56,189,248,.15); }
+  .field.invalid input, .field.invalid select, .field.invalid textarea { border-color: #f87171; }
+  .err { font-size: .8rem; color: #fca5a5; min-height: 1em; }
+  .form-foot { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; margin-top: 24px; }
+  .form-foot .btn[disabled] { opacity: .7; cursor: progress; }
+  .spinner { animation: spin 1s linear infinite; }
+  .notice { display: none; gap: 10px; align-items: flex-start; padding: 14px 16px; border-radius: 10px; margin-top: 20px; font-size: .9rem; }
+  .notice svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
+  .notice.show { display: flex; }
+  .notice.ok { background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.3); color: #bae6fd; }
+  .notice.bad { background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.3); color: #fecaca; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
+  .foot { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; }
+  .foot h4 { font: 600 .8rem var(--head); letter-spacing: .12em; text-transform: uppercase; color: var(--silver); margin-bottom: 16px; }
+  .foot ul { list-style: none; display: grid; gap: 10px; }
+  .foot ul a { color: #cbd5e1; font-size: .92rem; transition: color .2s; }
+  .foot ul a:hover { color: var(--sky); }
+  .foot-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--silver); font-size: .85rem; }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .values { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+    .steps::before { display: none; }
+    .foot { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 900px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-btn { display: inline-flex; }
+    .hero .wrap, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .viz { max-width: 380px; order: -1; }
+    .project { grid-template-columns: 1fr; }
+    .p-visual { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 88px 0; }
+    .hero { padding: 32px 0 88px; }
+    .grid-3, .grid-2, .fields { grid-template-columns: 1fr; }
+    .values { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: 1fr; }
+    .card, form.card, .p-body { padding: 24px; }
+    .cta-box { padding: 64px 20px; }
+    .foot { grid-template-columns: 1fr; }
+    .hero-ctas .btn { flex: 1 1 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Logo symbol: geometric M inside a ring, with a Q tail -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <symbol id="mark" viewBox="0 0 40 40">
+      <circle cx="19" cy="19" r="15" fill="none" stroke="url(#lg)" stroke-width="2.4"/>
+      <path d="M12 25V13.5l7 7 7-7V25" fill="none" stroke="#F8FAFC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M28.5 28.5L35 35" stroke="url(#lg)" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="brand" aria-label="MOTEQAR home"><svg aria-hidden="true"><use href="#mark"/></svg>MOTEQAR</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Start a Project <i data-lucide="arrow-right"></i></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu"></i></button>
+  </div>
+</header>
+
+<div class="mobile" id="mobileMenu" aria-label="Mobile">
+  <a href="#home">Home <i data-lucide="arrow-up-right"></i></a>
+  <a href="#about">About <i data-lucide="arrow-up-right"></i></a>
+  <a href="#services">Services <i data-lucide="arrow-up-right"></i></a>
+  <a href="#products">Products <i data-lucide="arrow-up-right"></i></a>
+  <a href="#projects">Projects <i data-lucide="arrow-up-right"></i></a>
+  <a href="#contact">Contact <i data-lucide="arrow-up-right"></i></a>
+  <a href="#contact" class="btn btn-primary">Start a Project <i data-lucide="arrow-right"></i></a>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="badge reveal"><b>New</b> Technology &amp; Digital Innovation Company</span>
+      <h1 class="reveal d1">Think Beyond.<br><span class="grad">Create Tomorrow.</span></h1>
+      <p class="lead reveal d2">We are MOTEQAR, a technology and digital innovation company building intelligent solutions, meaningful digital experiences, and technology for a better future.</p>
+      <div class="hero-ctas reveal d3">
+        <a href="#services" class="btn btn-primary">Explore Our Solutions <i data-lucide="arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Let's Collaborate <i data-lucide="message-square"></i></a>
+      </div>
+      <div class="hero-meta reveal d3">
+        <div><i data-lucide="code-xml"></i> Software &amp; Platforms</div>
+        <div><i data-lucide="smartphone"></i> Web &amp; Mobile</div>
+        <div><i data-lucide="sparkles"></i> Digital Innovation</div>
+      </div>
+    </div>
+
+    <svg class="viz reveal d2" viewBox="0 0 500 500" role="img" aria-label="Abstract visualization of connected technology nodes orbiting the MOTEQAR symbol">
+      <defs>
+        <radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2563EB" stop-opacity=".55"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle cx="250" cy="250" r="200" fill="url(#core)"/>
+      <circle cx="250" cy="250" r="210" fill="none" stroke="rgba(148,163,184,.15)"/>
+      <circle cx="250" cy="250" r="160" fill="none" stroke="rgba(56,189,248,.35)" class="dash"/>
+      <circle cx="250" cy="250" r="110" fill="none" stroke="rgba(148,163,184,.18)"/>
+      <g class="spin">
+        <polygon points="250,60 414,155 414,345 250,440 86,345 86,155" fill="none" stroke="rgba(148,163,184,.22)"/>
+        <g stroke="rgba(56,189,248,.35)">
+          <line x1="250" y1="60" x2="250" y2="140"/><line x1="414" y1="345" x2="345" y2="305"/><line x1="86" y1="345" x2="155" y2="305"/>
+        </g>
+        <circle cx="250" cy="60" r="6" fill="#38BDF8"/>
+        <circle cx="414" cy="155" r="4" fill="#94A3B8"/>
+        <circle cx="414" cy="345" r="6" fill="#2563EB"/>
+        <circle cx="250" cy="440" r="4" fill="#94A3B8"/>
+        <circle cx="86" cy="345" r="6" fill="#38BDF8"/>
+        <circle cx="86" cy="155" r="4" fill="#94A3B8"/>
+      </g>
+      <g class="spin-r">
+        <rect x="160" y="160" width="180" height="180" rx="20" fill="none" stroke="rgba(37,99,235,.45)" transform="rotate(45 250 250)"/>
+        <circle cx="250" cy="122" r="4" fill="#F8FAFC" class="pulse"/>
+        <circle cx="378" cy="250" r="4" fill="#F8FAFC" class="pulse" style="animation-delay:1s"/>
+        <circle cx="122" cy="250" r="4" fill="#F8FAFC" class="pulse" style="animation-delay:2s"/>
+      </g>
+      <g transform="translate(190 190) scale(3)">
+        <circle cx="19" cy="19" r="15" fill="#0B1220" stroke="url(#lg)" stroke-width="1.6"/>
+        <path d="M12 25V13.5l7 7 7-7V25" fill="none" stroke="#F8FAFC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28.5 28.5L35 35" stroke="url(#lg)" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="divider">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About MOTEQAR</span>
+      <h2>Driven by Creativity.<br>Powered by Technology.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="lead">MOTEQAR is a technology company focused on transforming ideas into meaningful digital solutions. We design, build, and scale software, applications, and digital products that help businesses and people move forward.</p>
+        <p class="muted" style="margin-top:16px">Our approach is simple: understand the real problem, design with people in mind, and engineer solutions that last. Beyond client work, we are building our own ecosystem of digital products for the long term.</p>
+        <div class="origin">
+          <div class="icon"><i data-lucide="lightbulb"></i></div>
+          <div>
+            <strong>Inspired by "Motékar"</strong>
+            <p class="muted" style="font-size:.93rem;margin-top:4px">A Sundanese word for creativity, resourcefulness, and the ability to find innovative solutions. It is the spirit behind everything we build.</p>
+          </div>
+        </div>
+      </div>
+      <div class="vm">
+        <p class="quote reveal">Technology should not simply solve today's problems. It should create opportunities for tomorrow.</p>
+        <div class="card reveal d1">
+          <div class="icon"><i data-lucide="telescope"></i></div>
+          <h3>Vision</h3>
+          <p>To become a trusted technology company that creates meaningful innovations and contributes to a better digital future.</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="icon"><i data-lucide="target"></i></div>
+          <h3>Mission</h3>
+          <ol class="mission">
+            <li>Develop innovative and impactful digital solutions.</li>
+            <li>Empower businesses through technology.</li>
+            <li>Build accessible and useful digital products.</li>
+            <li>Encourage creativity and continuous innovation.</li>
+            <li>Create sustainable technology ecosystems.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="values" role="list" aria-label="Core values">
+      <div class="value reveal" role="listitem"><i data-lucide="sparkles"></i><span>Innovation</span></div>
+      <div class="value reveal d1" role="listitem"><i data-lucide="shield-check"></i><span>Integrity</span></div>
+      <div class="value reveal d2" role="listitem"><i data-lucide="palette"></i><span>Creativity</span></div>
+      <div class="value reveal" role="listitem"><i data-lucide="users"></i><span>Collaboration</span></div>
+      <div class="value reveal d1" role="listitem"><i data-lucide="award"></i><span>Excellence</span></div>
+      <div class="value reveal d2" role="listitem"><i data-lucide="trending-up"></i><span>Impact</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="divider">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2>Technology capabilities built for what's next.</h2>
+      <p class="lead">From first idea to production, we bring strategy, design, and engineering together under one roof.</p>
+    </div>
+    <div class="grid-3" id="serviceGrid"></div>
+  </div>
+</section>
+
+<!-- INNOVATION -->
+<section class="innovation divider">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Innovation</span>
+      <h2>Great Ideas Deserve <span class="grad">Great Technology.</span></h2>
+      <p class="lead">We turn raw ideas into practical, working digital solutions through a clear and collaborative process.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num"><i data-lucide="search"></i></div><small>STEP 01</small><h3>Discover</h3><p>We dig into your goals, users, and constraints to define the real problem worth solving.</p></div>
+      <div class="step reveal d1"><div class="num"><i data-lucide="pen-tool"></i></div><small>STEP 02</small><h3>Design</h3><p>We shape intuitive experiences and a solid technical blueprint before writing production code.</p></div>
+      <div class="step reveal d2"><div class="num"><i data-lucide="cpu"></i></div><small>STEP 03</small><h3>Build</h3><p>We engineer in short iterations with modern, maintainable technology and continuous feedback.</p></div>
+      <div class="step reveal d3"><div class="num"><i data-lucide="rocket"></i></div><small>STEP 04</small><h3>Launch &amp; Evolve</h3><p>We ship, measure, and keep improving so your product grows with your users.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="divider">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Products &amp; Innovation</span>
+      <h2>Our own digital product ecosystem.</h2>
+      <p class="lead">Beyond client work, MOTEQAR is building proprietary platforms. Product details will be announced as they become available.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter products by category">
+      <button class="filter" aria-pressed="true" data-cat="all">All</button>
+      <button class="filter" aria-pressed="false" data-cat="Platform">Platform</button>
+      <button class="filter" aria-pressed="false" data-cat="Productivity">Productivity</button>
+      <button class="filter" aria-pressed="false" data-cat="AI">AI</button>
+      <button class="filter" aria-pressed="false" data-cat="Developer Tools">Developer Tools</button>
+    </div>
+    <div class="grid-3" id="productGrid" aria-live="polite"></div>
+    <p class="placeholder-note"><i data-lucide="info"></i> All products shown are placeholders. No product has been launched yet.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="divider">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Projects</span>
+      <h2>Selected work &amp; case studies.</h2>
+      <p class="lead">A look at how we approach problems. The case studies below are sample placeholders and will be replaced with real projects.</p>
+    </div>
+    <div id="projectList"></div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section>
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="eyebrow" style="margin-bottom:18px">Let's work together</span>
+      <h2>Have an idea? Let's build something <span class="grad">meaningful.</span></h2>
+      <p class="lead">Tell us what you're building. We'll help you shape it into a product people love to use.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Start a Project <i data-lucide="arrow-right"></i></a>
+        <a href="#services" class="btn btn-ghost">View Services <i data-lucide="layers"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="divider">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's Build Something Extraordinary.</h2>
+      <p class="lead">Share a few details about your project and we'll get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info reveal">
+        <div class="info-item"><div class="icon"><i data-lucide="mail"></i></div><div><small>Email</small>hello@[your-domain] <span class="muted">(placeholder)</span></div></div>
+        <div class="info-item"><div class="icon"><i data-lucide="briefcase"></i></div><div><small>Business inquiries</small>Partnerships, investment &amp; collaborations</div></div>
+        <div class="info-item"><div class="icon"><i data-lucide="clock"></i></div><div><small>Response</small>Response time to be confirmed</div></div>
+        <div class="socials" aria-label="Social media (links not yet set)">
+          <a href="#" aria-label="LinkedIn (placeholder)"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="Instagram (placeholder)"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="GitHub (placeholder)"><i data-lucide="github"></i></a>
+          <a href="#" aria-label="X (placeholder)"><i data-lucide="twitter"></i></a>
+        </div>
+      </div>
+
+      <form class="card reveal d1" id="contactForm" novalidate>
+        <div class="fields">
+          <div class="field"><label for="name">Name <span class="req">*</span></label><input id="name" name="name" autocomplete="name" required placeholder="Your full name"><span class="err" aria-live="polite"></span></div>
+          <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"><span class="err" aria-live="polite"></span></div>
+          <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" placeholder="Company name (optional)"><span class="err"></span></div>
+          <div class="field"><label for="type">Project type <span class="req">*</span></label>
+            <select id="type" name="type" required>
+              <option value="">Select a project type</option>
+              <option>Software Development</option><option>Web Development</option><option>Mobile Application</option>
+              <option>UI/UX Design</option><option>Digital Transformation</option><option>Technology Consulting</option><option>Other</option>
+            </select><span class="err" aria-live="polite"></span></div>
+          <div class="field full"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" required placeholder="Tell us about your idea, goals, and timeline"></textarea><span class="err" aria-live="polite"></span></div>
+        </div>
+        <div class="form-foot">
+          <span class="muted" style="font-size:.85rem">Fields marked * are required.</span>
+          <button class="btn btn-primary" type="submit" id="submitBtn"><span>Send Message</span> <i data-lucide="send"></i></button>
+        </div>
+        <div class="notice ok" id="okMsg" role="status"><i data-lucide="circle-check"></i><span>Thank you. Your message is ready to send. Note: this form is not yet connected to a backend.</span></div>
+        <div class="notice bad" id="badMsg" role="alert"><i data-lucide="circle-alert"></i><span>Please fix the highlighted fields and try again.</span></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#home" class="brand"><svg aria-hidden="true"><use href="#mark"/></svg>MOTEQAR</a>
+        <p class="muted" style="margin-top:16px;max-width:320px;font-size:.93rem">Technology &amp; Digital Innovation. Building Meaningful Digital Futures.</p>
+      </div>
+      <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="#services">Software Development</a></li><li><a href="#services">Web Development</a></li><li><a href="#services">Mobile Apps</a></li><li><a href="#services">UI/UX Design</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="#products">Products</a></li><li><a href="#services">Consulting</a></li><li><a href="#contact">Start a Project</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>&copy; <span id="year"></span> MOTEQAR. All rights reserved.</span><span>Think Beyond. Create Tomorrow.</span></div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script>
+// ---- Content (edit here to update sections) ----
+const services = [
+  { icon: "code-xml", title: "Software Development", desc: "Custom software and business applications.", benefits: ["Tailored to your workflows", "Scalable architecture", "Long-term maintainability"], cta: "Discuss your software" },
+  { icon: "globe", title: "Web Development", desc: "Modern websites, web applications, and digital platforms.", benefits: ["Fast, SEO-friendly builds", "Responsive on every device", "Secure and reliable"], cta: "Plan your web project" },
+  { icon: "smartphone", title: "Mobile App Development", desc: "Android and iOS application solutions.", benefits: ["Native-quality experience", "Cross-platform options", "App store ready"], cta: "Build your app" },
+  { icon: "pen-tool", title: "UI/UX Design", desc: "Human-centered digital experiences and intuitive interfaces.", benefits: ["Research-driven decisions", "Design systems", "Accessible by default"], cta: "Improve your UX" },
+  { icon: "refresh-cw", title: "Digital Transformation", desc: "Technology solutions that help businesses become more efficient.", benefits: ["Process automation", "Cloud modernization", "Data-informed operations"], cta: "Start transforming" },
+  { icon: "compass", title: "Technology Consulting", desc: "Strategic technology planning and digital innovation.", benefits: ["Clear technology roadmap", "Stack & vendor guidance", "Risk-aware planning"], cta: "Book a consultation" },
+];
+// Placeholders only: replace with real products when available.
+const products = [
+  { icon: "layers", name: "Product Name A", cat: "Platform", status: "In Development", desc: "Placeholder for a future MOTEQAR platform. Description will be added at announcement." },
+  { icon: "list-checks", name: "Product Name B", cat: "Productivity", status: "Concept", desc: "Placeholder for a future productivity product. Details coming soon." },
+  { icon: "brain-circuit", name: "Product Name C", cat: "AI", status: "Concept", desc: "Placeholder for a future AI-powered solution. Details coming soon." },
+];
+// Sample case studies only: replace with real projects.
+const projects = [
+  { title: "Sample Project One", industry: "Retail & E-commerce (placeholder)", problem: "Example: manual order handling slowed operations and caused errors.", solution: "Example: a unified web platform with automated order and inventory flows.", tech: ["Next.js", "TypeScript", "PostgreSQL"], outcome: "Outcome metrics will be published with the real case study." },
+  { title: "Sample Project Two", industry: "Education (placeholder)", problem: "Example: learners lacked an accessible way to study on mobile.", solution: "Example: a cross-platform mobile app with offline-ready learning content.", tech: ["React Native", "Node.js", "Firebase"], outcome: "Outcome metrics will be published with the real case study." },
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+document.getElementById("serviceGrid").innerHTML = services.map((s, i) => `
+  <article class="card reveal d${i % 3}">
+    <div class="icon"><i data-lucide="${s.icon}"></i></div>
+    <h3>${esc(s.title)}</h3><p>${esc(s.desc)}</p>
+    <ul class="ticks">${s.benefits.map(b => `<li><i data-lucide="check"></i>${esc(b)}</li>`).join("")}</ul>
+    <a href="#contact" class="link">${esc(s.cta)} <i data-lucide="arrow-right"></i></a>
+  </article>`).join("");
+
+function renderProducts(cat) {
+  const list = cat === "all" ? products : products.filter(p => p.cat === cat);
+  const grid = document.getElementById("productGrid");
+  grid.innerHTML = list.length ? list.map(p => `
+    <article class="card product">
+      <div class="product-top">
+        <div class="plogo" aria-label="Logo placeholder"><i data-lucide="${p.icon}"></i></div>
+        <span class="status ${p.status === "In Development" ? "dev" : ""}">${esc(p.status)}</span>
+      </div>
+      <p class="tag">${esc(p.cat)}</p>
+      <h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>
+      <a class="link" aria-disabled="true" tabindex="-1">Launch link coming soon <i data-lucide="lock"></i></a>
+    </article>`).join("")
+    : `<div class="empty"><i data-lucide="package-open"></i><p>No products in this category yet. Stay tuned.</p></div>`;
+  lucide.createIcons();
+}
+document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed", b === btn));
+  renderProducts(btn.dataset.cat);
+}));
+
+const art = `<svg class="art" viewBox="0 0 200 140" aria-hidden="true"><rect x="10" y="10" width="180" height="120" rx="10" fill="#0B1220" stroke="rgba(148,163,184,.35)"/><rect x="10" y="10" width="180" height="18" rx="10" fill="rgba(148,163,184,.12)"/><circle cx="22" cy="19" r="3" fill="#38BDF8"/><circle cx="32" cy="19" r="3" fill="#94A3B8"/><rect x="24" y="42" width="70" height="8" rx="4" fill="rgba(248,250,252,.8)"/><rect x="24" y="56" width="110" height="6" rx="3" fill="rgba(148,163,184,.4)"/><rect x="24" y="80" width="46" height="36" rx="6" fill="rgba(37,99,235,.5)"/><rect x="78" y="80" width="46" height="36" rx="6" fill="rgba(56,189,248,.3)"/><rect x="132" y="80" width="44" height="36" rx="6" fill="rgba(148,163,184,.2)"/></svg>`;
+document.getElementById("projectList").innerHTML = projects.map(p => `
+  <article class="card project reveal">
+    <div class="p-visual">${art}<span class="ph"><i data-lucide="image"></i> Project image placeholder</span></div>
+    <div class="p-body">
+      <p class="tag">${esc(p.industry)}</p>
+      <h3>${esc(p.title)}</h3>
+      <dl class="p-rows">
+        <div><dt>Problem</dt><dd>${esc(p.problem)}</dd></div>
+        <div><dt>Solution</dt><dd>${esc(p.solution)}</dd></div>
+        <div><dt>Technologies</dt><dd class="chips">${p.tech.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</dd></div>
+        <div><dt>Outcome</dt><dd>${esc(p.outcome)}</dd></div>
+      </dl>
+    </div>
+  </article>`).join("");
+
+renderProducts("all");
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Nav: scrolled state + active link
+const nav = document.getElementById("nav");
+const onScroll = () => nav.classList.toggle("scrolled", scrollY > 10);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+const links = [...document.querySelectorAll(".nav-links a")];
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(a => a.classList.toggle("active", a.hash === "#" + e.target.id));
+}), { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("section[id]").forEach(s => spy.observe(s));
+
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn"), menu = document.getElementById("mobileMenu");
+function setMenu(open) {
+  menu.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open);
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  menuBtn.innerHTML = `<i data-lucide="${open ? "x" : "menu"}"></i>`;
+  document.body.style.overflow = open ? "hidden" : "";
+  lucide.createIcons();
+}
+menuBtn.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+// Card spotlight follows cursor
+document.addEventListener("pointermove", e => {
+  const c = e.target.closest && e.target.closest(".card");
+  if (!c) return;
+  const r = c.getBoundingClientRect();
+  c.style.setProperty("--mx", e.clientX - r.left + "px");
+  c.style.setProperty("--my", e.clientY - r.top + "px");
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// Contact form: validation + loading/success/error states
+// shortcut: no backend, submit only simulates sending; wire to an API/form service before launch.
+const form = document.getElementById("contactForm"), okMsg = document.getElementById("okMsg"), badMsg = document.getElementById("badMsg"), submitBtn = document.getElementById("submitBtn");
+const rules = {
+  name: v => v.trim().length >= 2 || "Please enter your name.",
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || "Please enter a valid email address.",
+  type: v => !!v || "Please choose a project type.",
+  message: v => v.trim().length >= 10 || "Please write at least 10 characters.",
+};
+function check(el) {
+  const rule = rules[el.name]; if (!rule) return true;
+  const res = rule(el.value), field = el.closest(".field");
+  field.classList.toggle("invalid", res !== true);
+  field.querySelector(".err").textContent = res === true ? "" : res;
+  el.setAttribute("aria-invalid", res !== true);
+  return res === true;
+}
+form.addEventListener("input", e => { if (e.target.closest(".field.invalid")) check(e.target); });
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  okMsg.classList.remove("show"); badMsg.classList.remove("show");
+  const els = [...form.elements].filter(el => rules[el.name]);
+  const valid = els.map(check).every(Boolean);
+  if (!valid) { badMsg.classList.add("show"); els.find(el => el.getAttribute("aria-invalid") === "true").focus(); return; }
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `<span>Sending...</span> <i data-lucide="loader-circle" class="spinner"></i>`; lucide.createIcons();
+  await new Promise(r => setTimeout(r, 1000));
+  submitBtn.disabled = false;
+  submitBtn.innerHTML = `<span>Send Message</span> <i data-lucide="send"></i>`; lucide.createIcons();
+  form.reset(); okMsg.classList.add("show");
+});
+
+lucide.createIcons();
+</script>
+</body>
+</html>

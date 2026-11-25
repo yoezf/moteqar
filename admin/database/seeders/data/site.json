@@ -1,0 +1,314 @@
+{
+ "builds": [
+  {
+   "icon": "globe-alt",
+   "title_id": "Website profil perusahaan",
+   "title_en": "Company profile website",
+   "desc_id": "Website profesional untuk bisnis, sekolah, dan organisasi. Cepat, responsif, dan mudah diperbarui.",
+   "desc_en": "Professional websites for businesses, schools, and organizations. Fast, responsive, and easy to update."
+  },
+  {
+   "icon": "building-storefront",
+   "title_id": "Aplikasi kasir & usaha",
+   "title_en": "Cashier & business apps",
+   "desc_id": "Pesanan, pembayaran, stok, dan laporan laba untuk warung, kafe, dan resto, bisa dipakai di tablet maupun HP.",
+   "desc_en": "Orders, payments, stock, and profit reports for warungs, cafes, and restaurants, on tablets and phones."
+  },
+  {
+   "icon": "academic-cap",
+   "title_id": "Web pengelolaan sekolah",
+   "title_en": "School management web",
+   "desc_id": "Absensi, nilai, rapor digital, dan portal orang tua untuk SD dan SMP.",
+   "desc_en": "Attendance, grades, digital report cards, and a parent portal for SD and SMP."
+  },
+  {
+   "icon": "device-phone-mobile",
+   "title_id": "Aplikasi Android & iOS",
+   "title_en": "Android & iOS apps",
+   "desc_id": "Aplikasi mobile native atau lintas platform, dari ide sampai rilis di toko aplikasi.",
+   "desc_en": "Native or cross-platform mobile apps, from idea to release on the app stores."
+  },
+  {
+   "icon": "clipboard-document-check",
+   "title_id": "Sistem absensi",
+   "title_en": "Attendance systems",
+   "desc_id": "Absensi berbasis web atau Google Apps Script, dengan kode QR atau pengenalan wajah bila diperlukan.",
+   "desc_en": "Attendance on the web or with Google Apps Script, using QR codes or face recognition when needed."
+  },
+  {
+   "icon": "squares-2x2",
+   "title_id": "Dasbor & alat internal",
+   "title_en": "Dashboards & internal tools",
+   "desc_id": "Dasbor, pengelolaan data, dan sistem internal untuk operasional, gudang, atau industri, terhubung dengan alat kerja yang sudah Anda pakai.",
+   "desc_en": "Dashboards, data management, and internal systems for operations, warehouses, or industry, connected to the tools you already use."
+  },
+  {
+   "icon": "heart",
+   "title_id": "Undangan digital",
+   "title_en": "Digital invitations",
+   "desc_id": "Undangan nikah, pesta, dan hari besar dalam satu tautan yang mudah dibagikan: jadwal, peta lokasi, konfirmasi hadir, daftar tamu, dan musik, dengan desain sesuai keinginan.",
+   "desc_en": "Wedding, party, and holiday invitations as a shareable link: schedule, map, RSVP, guest list, and music, with your own design."
+  },
+  {
+   "icon": "calendar-days",
+   "title_id": "Planner pernikahan",
+   "title_en": "Wedding planner",
+   "desc_id": "Daftar tugas, anggaran, daftar vendor, dan jadwal persiapan pernikahan dalam satu tempat supaya tidak ada yang terlewat.",
+   "desc_en": "A checklist, budget, vendor list, and timeline to keep wedding preparations organized in one place."
+  },
+  {
+   "icon": "banknotes",
+   "title_id": "Planner tabungan",
+   "title_en": "Savings planner",
+   "desc_id": "Tentukan target, bagi menjadi rencana, dan pantau kemajuannya untuk pernikahan, liburan, atau tujuan apa pun.",
+   "desc_en": "Set a goal, split it into a plan, and track progress toward a wedding, trip, or any target."
+  }
+ ],
+ "faq": [
+  {
+   "question_id": "Berapa lama proses pengembangannya?",
+   "answer_id": "Tergantung ruang lingkupnya. Website sederhana biasanya memakan waktu beberapa minggu, sedangkan aplikasi kustom lebih lama. Estimasi waktu kami sampaikan di proposal sebelum pekerjaan dimulai.",
+   "question_en": "How long does development take?",
+   "answer_en": "It depends on the scope. A simple website usually takes a few weeks, while a custom application takes longer. We provide a timeline estimate in the proposal before work begins."
+  },
+  {
+   "question_id": "Bisakah saya meminta fitur khusus?",
+   "answer_id": "Bisa. Fitur khusus adalah keahlian kami. Ceritakan kebutuhan Anda, dan kami akan merekomendasikan pendekatan terbaik serta menjelaskan pengaruhnya terhadap ruang lingkup.",
+   "question_en": "Can I request custom features?",
+   "answer_en": "Yes. Custom features are what we do best. Tell us what you need and we will recommend the best approach and explain how it affects scope."
+  },
+  {
+   "question_id": "Apakah website-nya responsif?",
+   "answer_id": "Ya. Setiap website yang kami bangun dirancang agar nyaman dipakai di ponsel, tablet, maupun layar desktop.",
+   "question_en": "Will the website be responsive?",
+   "answer_en": "Yes. Every website we build is designed to work well on phones, tablets, and desktop screens."
+  },
+  {
+   "question_id": "Bisakah saya mengelola konten website sendiri?",
+   "answer_id": "Bisa. Kami dapat menyertakan sistem manajemen konten sehingga Anda bisa memperbarui teks, gambar, dan halaman sendiri, dan kami jelaskan cara memakainya.",
+   "question_en": "Can I manage my website content?",
+   "answer_en": "Yes. We can include a content management system so you can update text, images, and pages yourself, and we explain how to use it."
+  },
+  {
+   "question_id": "Apakah Anda menyediakan pemeliharaan?",
+   "answer_id": "Ya. Kami menyediakan pemeliharaan dan dukungan teknis, termasuk pembaruan, perbaikan, dan peningkatan setelah peluncuran.",
+   "question_en": "Do you provide maintenance?",
+   "answer_en": "Yes. We offer maintenance and technical support, including updates, fixes, and improvements after launch."
+  },
+  {
+   "question_id": "Bisakah Anda mendesain ulang website yang sudah ada?",
+   "answer_id": "Bisa. Kami dapat menyegarkan tampilan, meningkatkan performa, dan menata ulang konten, sambil mempertahankan bagian yang sudah berjalan baik.",
+   "question_en": "Can you redesign an existing website?",
+   "answer_en": "Yes. We can refresh the design, improve performance, and restructure content while keeping what already works."
+  },
+  {
+   "question_id": "Bagaimana proses pembayarannya?",
+   "answer_id": "Ketentuan pembayaran disepakati dalam penawaran tertulis, biasanya dibagi dalam beberapa tahap sesuai tonggak proyek. Rinciannya bergantung pada ruang lingkup proyek.",
+   "question_en": "How does the payment process work?",
+   "answer_en": "Payment terms are agreed in the written quote, usually divided into stages tied to project milestones. Details depend on the project scope."
+  }
+ ],
+ "plans": [
+  {
+   "code": "starter",
+   "name": "STARTER",
+   "title_id": "Untuk landing page dan website perusahaan sederhana.",
+   "title_en": "For landing pages and simple company websites.",
+   "scope_id": [
+    "Satu halaman atau website kecil",
+    "Desain responsif",
+    "Formulir kontak",
+    "Pengaturan SEO dasar"
+   ],
+   "scope_en": [
+    "Single-page or small website",
+    "Responsive design",
+    "Contact form",
+    "Basic SEO setup"
+   ]
+  },
+  {
+   "code": "business",
+   "name": "BUSINESS",
+   "title_id": "Untuk website perusahaan profesional dan platform bisnis.",
+   "title_en": "For professional company websites and business platforms.",
+   "scope_id": [
+    "Website perusahaan multi-halaman",
+    "Desain dan struktur konten kustom",
+    "Manajemen konten",
+    "Integrasi pihak ketiga"
+   ],
+   "scope_en": [
+    "Multi-page company website",
+    "Custom design and content structure",
+    "Content management",
+    "Third-party integrations"
+   ]
+  },
+  {
+   "code": "custom",
+   "name": "CUSTOM",
+   "title_id": "Untuk aplikasi kompleks, dasbor, dan software kustom.",
+   "title_en": "For complex applications, dashboards, and custom software.",
+   "scope_id": [
+    "Aplikasi web atau mobile",
+    "Dasbor dan sistem manajemen",
+    "Integrasi sistem",
+    "Perencanaan dan dukungan khusus"
+   ],
+   "scope_en": [
+    "Web or mobile applications",
+    "Dashboards and management systems",
+    "System integration",
+    "Dedicated planning and support"
+   ]
+  }
+ ],
+ "portfolio": [
+  {
+   "kind": "case",
+   "url": null,
+   "tech": [
+    "Aplikasi web",
+    "Android (uji)",
+    "Printer Bluetooth",
+    "Scan barcode"
+   ],
+   "cover": "portfolio/kasir/02-dasbor.webp",
+   "title_id": "Hormone Growth Kasir",
+   "title_en": "Hormone Growth Kasir",
+   "industry_id": "Makanan & minuman (warung, kafe, resto)",
+   "industry_en": "Food & beverage (warung, cafe, restaurant)",
+   "overview_id": "Aplikasi kasir dan manajemen usaha yang mengikuti jalannya operasional harian, sehingga pekerjaan yang biasanya dicatat di buku terpisah terjadi otomatis.",
+   "overview_en": "A cashier and business app that follows daily operations, so work that is usually recorded in separate notebooks happens automatically.",
+   "highlights_id": [
+    "Dasbor penjualan, margin, dan peringatan stok",
+    "Kasir di HP atau tablet: tunai, QRIS (dalam uji), transfer, GoFood, GrabFood",
+    "Layar dapur dengan pewaktu per meja",
+    "Laporan laba rugi, menu terlaris, dan pengawasan kasir"
+   ],
+   "highlights_en": [
+    "Dashboard for sales, margins, and stock alerts",
+    "Cashier on phone or tablet: cash, QRIS (in testing), transfer, GoFood, GrabFood",
+    "Kitchen screen with a timer per table",
+    "Profit and loss, best sellers, and cashier monitoring"
+   ]
+  },
+  {
+   "kind": "case",
+   "url": null,
+   "tech": [
+    "Aplikasi web",
+    "Rapor PDF",
+    "Absensi wajah",
+    "Multi-sekolah"
+   ],
+   "cover": "portfolio/sekolah/02-dasbor.webp",
+   "title_id": "Hormone Growth Sekolah",
+   "title_en": "Hormone Growth Sekolah",
+   "industry_id": "Pendidikan (SD dan SMP)",
+   "industry_en": "Education (SD and SMP)",
+   "overview_id": "Aplikasi sekolah yang mengubah administrasi berulang menjadi beberapa klik, dari guru, kepala sekolah, hingga orang tua.",
+   "overview_en": "A school app that turns repetitive administration into a few clicks, from teachers to principals to parents.",
+   "highlights_id": [
+    "Dasbor kehadiran siswa, guru, dan rapor",
+    "Input nilai dengan nilai akhir otomatis",
+    "Absensi wajah tanpa menyimpan foto",
+    "Rapor PDF berkode verifikasi dan portal orang tua"
+   ],
+   "highlights_en": [
+    "Dashboard for student, teacher, and report card status",
+    "Grade entry with automatic final grades",
+    "Face attendance without storing photos",
+    "Report card PDF with a verification code and a parent portal"
+   ]
+  },
+  {
+   "kind": "live",
+   "url": "https://rujakbangkokpremium.com/",
+   "tech": [
+    "Website responsif",
+    "Peta outlet (Leaflet)",
+    "Cloudflare",
+    "Artikel blog"
+   ],
+   "cover": "portfolio/rujak/01-beranda.webp",
+   "title_id": "Website Rujak Bangkok Premium",
+   "title_en": "Rujak Bangkok Premium Website",
+   "industry_id": "Makanan & minuman (rujak dan buah, 8 outlet di Bandung)",
+   "industry_en": "Food & beverage (fruit and rujak, 8 outlets in Bandung)",
+   "overview_id": "Website untuk Rujak Bangkok Premium, brand rujak dan buah potong segar di Bandung dan Cimahi yang berdiri sejak 2019. Memperkenalkan brand, menu favorit beserta harga, dan tempat membeli.",
+   "overview_en": "The website for Rujak Bangkok Premium, a fresh fruit and rujak brand in Bandung and Cimahi that opened in 2019. It introduces the brand, its favorite menu with prices, and where to buy.",
+   "highlights_id": [
+    "Menu favorit lengkap dengan harga",
+    "Peta 8 outlet dengan jam buka dan tombol rute",
+    "Pesan online lewat aplikasi pesan antar atau WhatsApp",
+    "Company profile PDF, artikel, dan ulasan Google"
+   ],
+   "highlights_en": [
+    "Favorite menu with prices",
+    "Map of 8 outlets with hours and a route button",
+    "Order through delivery apps or WhatsApp",
+    "Company profile PDF, articles, and Google reviews"
+   ]
+  },
+  {
+   "kind": "live",
+   "url": "https://wedding-arifmira.online/",
+   "tech": [
+    "Tailwind CSS",
+    "JavaScript",
+    "Google Maps",
+    "Musik latar"
+   ],
+   "cover": "portfolio/undangan/01-sampul.webp",
+   "title_id": "Undangan Digital Pernikahan",
+   "title_en": "Digital Wedding Invitation",
+   "industry_id": "Acara & pernikahan",
+   "industry_en": "Events & weddings",
+   "overview_id": "Undangan pernikahan digital yang nyaman dibuka di HP dan dikirim lewat satu tautan. Tamu cukup membukanya dari pesan chat dan menemukan semua informasi acara di satu tempat.",
+   "overview_en": "A mobile-friendly digital wedding invitation delivered as a single link. Guests open it from a chat message and find everything about the day in one place.",
+   "highlights_id": [
+    "Sampul Buka Undangan dengan musik latar",
+    "Jadwal acara dengan peta tertanam",
+    "RSVP kehadiran, jumlah tamu, dan ucapan",
+    "Hadiah online dengan tombol salin nomor"
+   ],
+   "highlights_en": [
+    "Open Invitation cover with background music",
+    "Event schedule with an embedded map",
+    "RSVP for attendance, guests, and wishes",
+    "Online gift with a copy-number button"
+   ]
+  },
+  {
+   "kind": "live",
+   "url": null,
+   "tech": [
+    "Google Apps Script",
+    "Aplikasi web",
+    "GPS (lokasi)",
+    "Login admin"
+   ],
+   "cover": "portfolio/absensi/00-sampul.webp",
+   "title_id": "Absensi Karyawan Berbasis GPS",
+   "title_en": "GPS-Based Employee Attendance",
+   "industry_id": "Operasional (karyawan outlet)",
+   "industry_en": "Operations (outlet employees)",
+   "overview_id": "Aplikasi web absensi karyawan untuk outlet Rujak Bangkok Premium. Berjalan di Google Apps Script sehingga tidak butuh server sendiri, dan memakai lokasi GPS perangkat saat karyawan absen.",
+   "overview_en": "An employee attendance web app for the Rujak Bangkok Premium outlets. It runs on Google Apps Script, so it needs no server of its own, and uses the device's GPS location when employees check in.",
+   "highlights_id": [
+    "Karyawan absen dari HP dengan lokasi GPS",
+    "Dasbor admin dengan login",
+    "Kalender absensi dengan ekspor dan impor",
+    "Menu payroll, jabatan, jadwal, dan outlet"
+   ],
+   "highlights_en": [
+    "Employees check in from a phone using GPS location",
+    "Admin dashboard with login",
+    "Attendance calendar with export and import",
+    "Payroll, positions, schedule, and outlet menus"
+   ]
+  }
+ ]
+}
