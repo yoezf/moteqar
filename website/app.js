@@ -333,7 +333,7 @@ HI_O.instagram = '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="1
 const ic = (n, cls = "") => svgIcon(HI_O[n], 'fill="none" stroke="currentColor" stroke-width="2"', cls);
 const ics = (n, cls = "") => svgIcon(HI_S[n], 'fill="currentColor"', cls);
 const BRAND = `<strong class="nm">MOTE<em class="bq" aria-hidden="true"><b class="k">K</b><b class="q">Q</b><b class="qy">Q</b></em>AR</strong><span>.</span>`;
-const NAV = ["services", "portfolio", "process", "pricing"]; // also the section ids
+const NAV = ["services", "about", "portfolio", "process", "pricing"]; // also the section ids
 
 /* ---------- Shell ---------- */
 const FLAG = { // inline SVG flags, no emoji
@@ -417,7 +417,7 @@ const secHero = () => `<section class="hero" id="home"><div class="wrap">
     <h1><span class="ln in2">${T.hero.h1[0]}</span><br><span class="rot in3" style="--dur:${(T.hero.rot.length + 1) * STEP}s" aria-hidden="true">${[T.hero.h1[1], ...T.hero.rot].map((w, i) => `<span style="animation-delay:${i * STEP}s"><em class="mark">${w}</em></span>`).join("")}</span><span class="sr">${[T.hero.h1[1], ...T.hero.rot].join(", ")}</span></h1>
   </div>
   <div class="hero-row in4"><p class="lead">${T.hero.p}</p>
-    <div class="hero-cta"><div class="row">${btn("#portfolio", "btn-soft", T.hero.cta2)}</div><p class="small muted">${T.hero.note}</p></div></div>
+    <div class="hero-cta"><div class="row">${btn("#contact", "btn-primary", T.hero.cta1, "arrow-up-right")}${btn("#portfolio", "btn-soft", T.hero.cta2)}</div><p class="small muted">${T.hero.note}</p></div></div>
 </div></section>`;
 
 const secFamiliar = () => section("", "tint fam", `${head(T.familiar.badge, `<span class="mark">${T.familiar.h}</span>`, T.familiar.p)}
@@ -427,7 +427,7 @@ const secTrust = () => section("", "", `${head(T.trust.eyebrow, T.trust.h, T.tru
   <div class="grid4">${T.trust.items.map((x, i) => `<article class="card rv" ${d(i)}><div class="ico">${ics(TRUST_ICONS[i])}</div><h3>${x[0]}</h3><p class="muted" style="font-size:.96rem">${x[1]}</p></article>`).join("")}</div>`);
 
 const secAbout = () => section("about", "tint", `<div class="story"><div class="rv"><span class="badge">${T.story.badge}</span><h2 style="margin:16px 0 20px">${T.story.h}</h2><p class="lead">${T.story.p1}</p><p class="muted">${T.story.p2}</p><div class="aksara"><span class="aksara-glyph" lang="su">ᮙᮧᮒᮦᮊᮁ</span><small>${T.story.script}</small></div></div><div class="wm rv" aria-hidden="true">${[..."MOTE"].map((ch, i) => `<span class="l" style="--i:${i}">${ch}</span>`).join("")}<span class="slot" style="--i:4"><b class="k">K</b><b class="q">Q</b><b class="qy">Q</b></span>${[..."AR"].map((ch, i) => `<span class="l" style="--i:${i + 5}">${ch}</span>`).join("")}</div></div>
-  <div class="head rv" style="margin:72px 0 32px"><span class="badge">${T.why.eyebrow}</span><h2>${T.why.h}</h2></div>
+  <div class="head rv" style="margin:72px auto 32px"><span class="badge">${T.why.eyebrow}</span><h2>${T.why.h}</h2></div>
   <div class="why slider" style="margin-top:0">${T.why.items.map((x, i) => `<article class="card rv" ${d(i % 3)}><span class="ico xs">${ics(WHY_ICONS[i])}</span><div><h3>${x[0]}</h3><p>${x[1]}</p></div></article>`).join("")}</div>`);
 
 const secPortfolio = () => section("portfolio", "tint", `${head(T.portfolio.eyebrow, T.portfolio.h, T.portfolio.p)}
@@ -714,6 +714,7 @@ document.addEventListener("keydown", e => {
 matchMedia("(min-width: 881px)").addEventListener("change", e => { if (e.matches && menuOpen) setMenu(false, false); });
 const onScroll = () => {
   $("nav").classList.toggle("scrolled", scrollY > 8);
+  document.querySelector(".fab-pill")?.classList.toggle("off", scrollY < 420); // hero already has the primary button
   // Active menu item = last menu section whose top has passed 45% of the viewport (sections follow NAV order).
   let cur = "home";
   for (const k of NAV) { const el = $(k); if (el && el.getBoundingClientRect().top <= innerHeight * .45) cur = k; }
