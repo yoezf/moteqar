@@ -496,12 +496,29 @@ function setRotKeyframes(total) {
   const p = x => (x / total * 100).toFixed(2);
   st.textContent = `@keyframes rot{0%{opacity:0;translate:0 .5em}${p(.4)}%,${p(2.1)}%{opacity:1;translate:0 0}${p(2.5)}%,100%{opacity:0;translate:0 -.5em}}`;
 }
+// Browser tab title: types "MOTEQAR", the Q blinks, then it erases and repeats. The static <title> in index.html stays for crawlers and link previews.
+let tabTimer;
+function tabTitle(full) {
+  clearTimeout(tabTimer); document.title = full;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const word = "MOTEQAR", qAt = word.indexOf("Q"), BLINKS = 3; let n = 1, dir = 1, blink = 1;
+  const step = () => {
+    let wait = dir > 0 ? 150 : 70, t = word.slice(0, n) + "|";
+    if (dir > 0 && n === word.length) { // fully typed: Q goes off and on, BLINKS times
+      t = blink % 2 ? word : word.slice(0, qAt) + " " + word.slice(qAt + 1); wait = 650;
+      if (++blink > BLINKS * 2 + 1) { blink = 1; dir = -1; wait = 500; }
+    } else if (dir < 0 && n === 1) { dir = 1; wait = 400; } else n += dir;
+    document.title = t; tabTimer = setTimeout(step, wait);
+  };
+  step();
+}
+
 let io;
 function render() {
   T = D[lang];
   const [title, desc] = T.meta.home;
   document.documentElement.lang = lang;
-  document.title = title;
+  tabTitle(title);
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
   for (const [sel, v] of [['property="og:title"', title], ['property="og:description"', desc], ['name="twitter:title"', title], ['name="twitter:description"', desc]]) document.querySelector(`meta[${sel}]`).setAttribute("content", v);
   document.querySelector('meta[property="og:locale"]').setAttribute("content", lang === "id" ? "id_ID" : "en_US");

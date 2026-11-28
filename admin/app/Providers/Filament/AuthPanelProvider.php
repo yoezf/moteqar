@@ -28,6 +28,7 @@ class AuthPanelProvider extends PanelProvider
             ->login(\App\Filament\Pages\Login::class)
             ->passwordReset()
             ->darkMode(false)
+            ->favicon('/favicon.svg')
             ->multiFactorAuthentication([\Filament\Auth\MultiFactor\App\AppAuthentication::make()->recoverable()])
             ->defaultAvatarProvider(\App\Filament\Support\ProfileAvatar::class)
             ->brandName('MOTEQAR')

@@ -27,6 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login(\App\Filament\Pages\LoginRedirect::class)
             ->darkMode(false)
+            ->favicon('/favicon.svg')
             ->databaseNotifications()
             ->multiFactorAuthentication([\Filament\Auth\MultiFactor\App\AppAuthentication::make()->recoverable()], isRequired: true)
             ->profile()

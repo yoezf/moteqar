@@ -27,6 +27,7 @@ class PortalPanelProvider extends PanelProvider
             ->path('portal')
             ->login(\App\Filament\Pages\LoginRedirect::class)
             ->darkMode(false)
+            ->favicon('/favicon.svg')
             ->databaseNotifications()
             ->multiFactorAuthentication([\Filament\Auth\MultiFactor\App\AppAuthentication::make()->recoverable()])
             ->profile()
